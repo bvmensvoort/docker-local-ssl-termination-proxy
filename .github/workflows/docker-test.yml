@@ -3,6 +3,8 @@ name: Docker local ssl termination proxy
 
 on:
   push:
+    branches: [ test ]
+  pull_request:
     branches: [ master ]
 
 jobs:
@@ -64,5 +66,5 @@ jobs:
         --platform ${{ steps.prepare.outputs.docker_platform }} \
         ${{ steps.prepare.outputs.tags }} \
         --file ./Dockerfile \
-        --output type=image,push=true \
+        --output type=image,push=false \
         .
