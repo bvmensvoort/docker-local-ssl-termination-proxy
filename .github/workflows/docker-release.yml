@@ -11,7 +11,7 @@ jobs:
 
   build:
 
-    runs-on: alpine-3.6
+    runs-on: ubuntu-latest
     env:      
       DOCKER_REGISTRY: registry.hub.docker.com 
       DOCKER_IMAGE: bvmensvoort/docker-local-ssl-termination-proxy     
