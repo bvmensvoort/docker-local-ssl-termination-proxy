@@ -5,6 +5,7 @@ LABEL maintainer="bvmensvoort <info@bvmensvoort.nl>"
 ENV NGINX_VERSION 1.13.5
 ENV CERTIFICATE_FILENAME nginx.pem
 ENV PRIVATEKEY_FILENAME nginx.key
+ENV DOMAIN localhost
 
 RUN apk add --no-cache openssl nginx gettext \
     && mkdir -p /etc/nginx/ssl/ \
