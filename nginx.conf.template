@@ -8,7 +8,7 @@ events {
 http {
   access_log /dev/stdout;
 
-  upstream app {
+  upstream ${DOMAIN} {
     server ${HOST_IP}:${PORT};
   }
 
@@ -20,7 +20,7 @@ http {
     ssl_certificate         /etc/nginx/ssl/${CERTIFICATE_FILENAME};
     ssl_certificate_key     /etc/nginx/ssl/${PRIVATEKEY_FILENAME};
     location / {
-      proxy_pass              http://app;
+      proxy_pass              http://${DOMAIN};
       proxy_set_header        Host    $host;
       proxy_set_header        X-Real-IP $remote_addr;
       proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
