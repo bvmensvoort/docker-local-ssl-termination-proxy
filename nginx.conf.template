@@ -7,6 +7,7 @@ events {
 
 http {
   access_log /dev/stdout;
+  client_max_body_size ${CLIENTMAXBODYSIZE};
 
   upstream ${DOMAIN} {
     server ${HOST_IP}:${PORT};
