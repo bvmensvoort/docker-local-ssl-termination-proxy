@@ -8,6 +8,7 @@ events {
 http {
   access_log /dev/stdout;
   client_max_body_size ${CLIENTMAXBODYSIZE};
+  add_header Strict-Transport-Security ${STRICTTRANSPORTSECURITY};
 
   upstream ${DOMAIN} {
     server ${HOST_IP}:${PORT};
