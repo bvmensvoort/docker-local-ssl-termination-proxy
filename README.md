@@ -13,6 +13,7 @@ This proxy is easy to use (1 command to launch) and nothing is installed on your
 ### Docker settings
 
 For example your domain is sub.example.com, and your internal website is hosted on 192.168.0.2.
+Use for your environment variables:
 - `HOST_IP` = 192.168.0.2 (can be a DNS name)
 - `CERTIFICATE_FILENAME` = sub.example.com-fullchain.txt (can be any filename which contains the full chain of certificates; file must exist on volume root)
 - `PRIVATEKEY_FILENAME` = sub.example.com.key (private key to decrypt the SSL encryption; file must exist on volume root)
