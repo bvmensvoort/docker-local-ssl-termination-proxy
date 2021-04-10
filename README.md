@@ -21,6 +21,8 @@ Use for your environment variables:
 - `DOMAINPORT` = 80 (or any port which Nextcloud will reply to)
 - `CLIENTMAXBODYSIZE` = 1G (To allow uploading of larger files)
 - `STRICTTRANSPORTSECURITY` = "max-age=63072000; includeSubdomains;" (needed for security, the quotes are needed)
+- `CALDAV` = empty (use "true" when you are using .well-known/caldav redirect)
+- `CARDDAV` = empty (use "true" when you are using .well-known/carddav redirect)
 
 For the volume, set:
 - `/etc/nginx/ssl` - make sure your certificate files are placed on this volume
