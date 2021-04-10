@@ -1,6 +1,6 @@
 # Docker Local SSL Termination Proxy
 
-A simple SSL Termination Proxy for accessing https://localhost.
+A simple SSL Termination Proxy for accessing https://[YOUR_DOMAIN].
 
 This proxy is easy to use (1 command to launch) and nothing is installed on your local machine thanks to Docker.
 
@@ -9,6 +9,21 @@ This proxy is easy to use (1 command to launch) and nothing is installed on your
 - Docker (1.10.0+)
 
 ## Usage
+
+### Docker settings
+
+For example your domain is sub.example.com, and your internal website is hosted on 192.168.0.2.
+Use for your environment variables:
+- `HOST_IP` = 192.168.0.2 (can be a DNS name)
+- `CERTIFICATE_FILENAME` = sub.example.com-fullchain.txt (can be any filename which contains the full chain of certificates; file must exist on volume root)
+- `PRIVATEKEY_FILENAME` = sub.example.com.key (private key to decrypt the SSL encryption; file must exist on volume root)
+- `DOMAIN` = sub.example.com
+- `DOMAINPORT` = 80 (or any port which Nextcloud will reply to)
+- `CLIENTMAXBODYSIZE` = 1G (To allow uploading of larger files)
+- `STRICTTRANSPORTSECURITY` = "max-age=63072000; includeSubdomains;" (needed for security, the quotes are needed)
+
+For the volume, set:
+- `/etc/nginx/ssl` - make sure your certificate files are placed on this volume
 
 ### Mac OSX
 
