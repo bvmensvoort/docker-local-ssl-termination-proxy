@@ -36,10 +36,10 @@ http {
       proxy_send_timeout 1d;
     }
     location /.well-known/carddav {
-      return 301 $scheme://$host:${{DOMAINPORT}}/remote.php/dav;
+      return 301 $scheme://$host:${DOMAINPORT}/remote.php/dav;
     }
     location /.well-known/caldav {
-      return 301 $scheme://$host:${{DOMAINPORT}}/remote.php/dav;
+      return 301 $scheme://$host:${DOMAINPORT}/remote.php/dav;
     }
   }
 }       
