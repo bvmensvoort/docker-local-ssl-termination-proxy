@@ -11,6 +11,7 @@ ENV DOMAINPORT 443
 ENV STRICTTRANSPORTSECURITY \"max-age=63072000; includeSubdomains;\"
 ENV CARDDAV ""
 ENV CALDAV ""
+ENV MATAMOURL ""
 
 RUN apk add --no-cache openssl nginx gettext \
     && mkdir -p /etc/nginx/ssl/ \
