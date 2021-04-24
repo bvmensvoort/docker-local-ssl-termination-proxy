@@ -23,6 +23,7 @@ Use for your environment variables:
 - `STRICTTRANSPORTSECURITY` = "max-age=63072000; includeSubdomains;" (needed for security, the quotes are needed)
 - `CALDAV` = empty (use "true" when you are using .well-known/caldav redirect)
 - `CARDDAV` = empty (use "true" when you are using .well-known/carddav redirect)
+- `MATOMOURL` = empty (use url to proxypass /matomo/, eg: http://matomo.domain.tld:port/, for use with [Matomo4Nextcloud](https://sualko.github.io/cloud_piwik/))
 
 For the volume, set:
 - `/etc/nginx/ssl` - make sure your certificate files are placed on this volume
